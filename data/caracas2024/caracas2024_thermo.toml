@@ -1,0 +1,13 @@
+[source]
+unique_id = "caracas2024"
+citation = "Caracas 2024"
+year = 2024
+
+[science]
+material = "pyrolite"
+formula = "NaCa2Al3Fe4Mg30Si24O65"
+phase = "liquid"
+method = "MD"
+
+[data]
+delimiter = "\t"

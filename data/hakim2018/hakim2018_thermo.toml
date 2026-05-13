@@ -1,0 +1,13 @@
+[source]
+unique_id = "hakim2018"
+citation = "Hakim et al. 2018"
+year = 2018
+
+[science]
+material = "iron"
+formula = "Fe"
+phase = "solid"
+method = "DFT"
+
+[data]
+delimiter = "\t"

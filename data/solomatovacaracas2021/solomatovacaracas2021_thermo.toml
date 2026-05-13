@@ -1,0 +1,13 @@
+[source]
+unique_id = "solomatovacaracas2021"
+citation = "Solomatova and Caracas 2021"
+year = 2021
+
+[science]
+material = "pyrolite"
+formula = "NaCa2Al3Fe4Mg30Si24O65"
+phase = "liquid"
+method = "MD"
+
+[data]
+delimiter = "\t"
