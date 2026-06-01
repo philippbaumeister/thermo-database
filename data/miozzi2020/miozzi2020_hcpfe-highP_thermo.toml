@@ -6,3 +6,6 @@ formula = "Fe"
 phase = "solid"
 cristal = "hcp"
 method = "DAC"
+
+[other]
+notes = "In the raw data, original table is missing dP on line 3, so 0 is used instead. On line 80, dT is missing, so 0 is used instead."
