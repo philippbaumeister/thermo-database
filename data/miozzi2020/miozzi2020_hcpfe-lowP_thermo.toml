@@ -6,3 +6,6 @@ formula = "Fe"
 phase = "solid"
 cristal = "hcp"
 method = "DAC"
+
+[other]
+notes = ""

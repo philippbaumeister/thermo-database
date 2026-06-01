@@ -1,8 +1,0 @@
-unique_id = "miozzi2020"
-
-[science]
-material = "iron"
-formula = "Fe"
-phase = "solid"
-cristal = "hcp"
-method = "DAC"
