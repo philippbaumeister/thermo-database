@@ -190,8 +190,8 @@ class EOSDatabase:
         # ---------------------------------
 
         required = [
-            "rho[g/cm^3]",
-            "P[GPa]",
+            "rho[kg/m^3]",
+            "P[Pa]",
             "T[K]",
             "entry",
         ]
@@ -279,8 +279,8 @@ class EOSDatabase:
             ]
 
             sc = ax.scatter(
-                sub["rho[g/cm^3]"],
-                sub["P[GPa]"],
+                sub["rho[kg/m^3]"],
+                sub["P[Pa]"] * 1e-9,
                 c=sub["T[K]"],
                 norm=norm,
                 marker=marker,
@@ -293,7 +293,7 @@ class EOSDatabase:
         # Axes
         # ---------------------------------
 
-        ax.set_xlabel(r"$\rho$ [g/cm$^3$]")
+        ax.set_xlabel(r"$\rho$ [kg/m$^3$]")
         ax.set_ylabel(r"$P$ [GPa]")
 
         ax.set_xscale("log")
