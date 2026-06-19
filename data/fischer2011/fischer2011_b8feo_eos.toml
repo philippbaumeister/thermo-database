@@ -15,12 +15,12 @@ thermal_type = "debye"
 reference_temperature = 300
 
 [validity]
-min_p = 131.343680431
-max_p = 155.982534269
+min_p = 131.343680431e9
+max_p = 155.982534269e9
 min_t = 300
 max_t = 2895.72
-min_rho = 8.88809466848
-max_rho = 9.29475724032
+min_rho = 8.88809466848e3
+max_rho = 9.29475724032e3
 
 [parameters]
 V_0 = 11.997
