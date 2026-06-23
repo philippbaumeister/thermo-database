@@ -159,9 +159,6 @@ def scan_eos(dir_data):
     rows = []
 
     for path_dat in dir_data.rglob("*_eos.toml"):
-        print(path_dat.parts[0])
-        print(path_dat.parts[1])
-        print(path_dat.parts[2])
         # skip folders and files starting with _
         if path_dat.parts[1].startswith("_") or path_dat.parts[2].startswith("_"):
             continue
