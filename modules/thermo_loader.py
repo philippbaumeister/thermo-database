@@ -130,8 +130,8 @@ def scan_thermo_tables(dir_data: str | Path) -> pd.DataFrame:
     dfs = []
 
     for path_dat in dir_data.rglob("*_thermo.dat"):
-        # skip folders starting with _
-        if path_dat.parts[1].startswith("_"):
+        # skip folders and files starting with _
+        if path_dat.parts[1].startswith("_") or path_dat.parts[2].startswith("_"):
             continue
 
         try:
@@ -154,14 +154,19 @@ def scan_eos(dir_data):
     Scan all folders recursively and merge information about eos.
     """
 
+    dir_data = Path(dir_data)
+
     rows = []
 
-    for file in Path(dir_data).rglob("*_eos.toml"):
-        # skip folders starting with _
-        if file.parts[0]=="_":
+    for path_dat in dir_data.rglob("*_eos.toml"):
+        print(path_dat.parts[0])
+        print(path_dat.parts[1])
+        print(path_dat.parts[2])
+        # skip folders and files starting with _
+        if path_dat.parts[1].startswith("_") or path_dat.parts[2].startswith("_"):
             continue
 
-        with open(file,"rb") as f:
+        with open(path_dat,"rb") as f:
             meta = tomllib.load(f)
 
         row = {}
@@ -178,10 +183,10 @@ def scan_eos(dir_data):
             for key, value in content.items():
                 row[f"{section}_{key}"] = value
 
-        row["source_file"] = (file.name)
+        row["source_file"] = (path_dat.name)
 
         label = (
-            file.stem          # remove .dat
+            path_dat.stem          # remove .dat
             .replace("_eos", "") # remove suffix
             .split("_", 1)[1]       # remove unique_id
         )
